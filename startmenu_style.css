@@ -1,0 +1,131 @@
+.div {
+	justify-content: center;
+	background-color: #fff;
+	background-image: url("./src/background.jpeg");
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	font-size: 80px;
+	color: #fff;
+	font-weight: 400;
+}
+
+@media (max-width: 991px) {
+	.div {
+		font-size: 40px;
+	}
+}
+
+.div-2 {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	min-height: 1080px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 80px 60px;
+}
+
+@media (max-width: 991px) {
+	.div-2 {
+		max-width: 100%;
+		font-size: 40px;
+		padding: 0 20px;
+	}
+}
+
+.img {
+	position: absolute;
+	inset: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.div-3 {
+	position: relative;
+	display: flex;
+	width: 987px;
+	max-width: 100%;
+	flex-direction: column;
+	align-items: center;
+	margin: 230px 0 212px;
+}
+
+@media (max-width: 991px) {
+	.div-3 {
+		font-size: 40px;
+		margin: 40px 0;
+	}
+}
+
+.div-4 {
+	text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+	align-self: stretch;
+	font: 93px Cascadia Code, sans-serif;
+}
+
+@media (max-width: 991px) {
+	.div-4 {
+		max-width: 100%;
+		font-size: 40px;
+	}
+}
+
+.play_button {
+	font-family: Cascadia Code, sans-serif;
+	font-size: 80px;
+	color: #fff;
+	backdrop-filter: blur(5px);
+	border-color: rgba(238, 238, 238, 1);
+	border-style: solid;
+	border-width: 4px;
+	background-color: rgba(17, 17, 17, 0.6);
+	margin-top: 36px;
+	width: 714px;
+	max-width: 100%;
+	align-items: center;
+	white-space: nowrap;
+	text-align: center;
+	justify-content: center;
+	padding: 23px 60px;
+}
+
+@media (max-width: 991px) {
+	.play_button {
+		font-size: 40px;
+		white-space: initial;
+		padding: 0 20px;
+	}
+}
+
+.settings_button {
+	font-family: Cascadia Code, sans-serif;
+	font-size: 80px;
+	color: #fff;
+	backdrop-filter: blur(5px);
+	border-color: rgba(238, 238, 238, 1);
+	border-style: solid;
+	border-width: 4px;
+	background-color: rgba(17, 17, 17, 0.6);
+	margin-top: 36px;
+	width: 714px;
+	max-width: 100%;
+	align-items: center;
+	white-space: nowrap;
+	text-align: center;
+	justify-content: center;
+	padding: 22px 60px;
+}
+
+@media (max-width: 991px) {
+	.settings_button {
+		font-size: 40px;
+		white-space: initial;
+		padding: 0 20px;
+	}
+}

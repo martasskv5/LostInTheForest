@@ -3,7 +3,8 @@ import {defineConfig} from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   envDir: './',
-  server: {
+  base: '/LostInTheForest/',
+  /*server: {
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
@@ -15,5 +16,5 @@ export default defineConfig({
     hmr: {
       clientPort: 443,
     },
-  },
+  },*/
 });

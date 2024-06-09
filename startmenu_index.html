@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost in the Forest</title>
+</head>
+
+<body>
+  <div class="div">
+    <div class="div-2">
+      <div class="div-3">
+        <div class="div-4">Lost in the Forest</div>
+        <button class="play_button">PLAY</button>
+        <button class="settings_button">SETTINGS</button>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const playButton = document.querySelector('.play_button');
+      const settingsButton = document.querySelector('.settings_button');
+
+      playButton.addEventListener('click', function () {
+        window.location.href = './src/play.html';
+      });
+
+      settingsButton.addEventListener('click', function () {
+        window.location.href = 'settings.html';
+      });
+    });
+  </script>
+</body>
+
+</html>

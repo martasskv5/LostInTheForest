@@ -1,131 +1,235 @@
-.div {
-	justify-content: center;
-	background-color: #fff;
-	background-image: url("./src/background.jpeg");
-	background-size: cover;
-	display: flex;
-	flex-direction: column;
-	font-size: 80px;
-	color: #fff;
-	font-weight: 400;
+html {
+    box-sizing: border-box;
+    background: #111;
+    background-image: url("./background.jpeg");
+    background-size: cover;
+    padding: 1em;
+    font-family: Noto Sans Display;
+    color: #eee;
+    font-size: 1em;
+    line-height: 1;
+    text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+    letter-spacing: 0.125em;
+    animation-duration: 0.01s;
+    animation-name: textflicker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-@media (max-width: 991px) {
-	.div {
-		font-size: 40px;
-	}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
-.div-2 {
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	position: relative;
-	display: flex;
-	min-height: 1080px;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-	padding: 80px 60px;
+body {
+    font-family: 'Roboto', 'Helvetica Neue', 'Lucida Grande', sans-serif;
 }
 
-@media (max-width: 991px) {
-	.div-2 {
-		max-width: 100%;
-		font-size: 40px;
-		padding: 0 20px;
-	}
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
 }
 
-.img {
-	position: absolute;
-	inset: 0;
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	object-position: center;
+.mainCont {
+    width: 1000px;
+    margin: 0 auto;
 }
 
-.div-3 {
-	position: relative;
-	display: flex;
-	width: 987px;
-	max-width: 100%;
-	flex-direction: column;
-	align-items: center;
-	margin: 230px 0 212px;
+.mainCont h2 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 48px;
+    margin: 40px 0 0 0;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0;
+
+    animation: fadeInAnimation 1s ease-in-out 0s forwards;
 }
 
-@media (max-width: 991px) {
-	.div-3 {
-		font-size: 40px;
-		margin: 40px 0;
-	}
+.mainCont h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 60px 0;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0;
+
+    animation: fadeInAnimation 1s ease-in-out 0.5s forwards;
 }
 
-.div-4 {
-	text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
-	align-self: stretch;
-	font: 93px Cascadia Code, sans-serif;
+.terminalCont {
+    background: black;
+    width: 100%;
+    border-radius: 4px;
+    padding: 120px 0 0 0;
+    margin-top: -20px;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0.6;
+    border-style: solid;
+    backdrop-filter: blur(5px);
 }
 
-@media (max-width: 991px) {
-	.div-4 {
-		max-width: 100%;
-		font-size: 40px;
-	}
+.userEnteredText {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    padding: 0;
+    display: inline-block;
 }
 
-.play_button {
-	font-family: Cascadia Code, sans-serif;
-	font-size: 80px;
-	color: #fff;
-	backdrop-filter: blur(5px);
-	border-color: rgba(238, 238, 238, 1);
-	border-style: solid;
-	border-width: 4px;
-	background-color: rgba(17, 17, 17, 0.6);
-	margin-top: 36px;
-	width: 714px;
-	max-width: 100%;
-	align-items: center;
-	white-space: nowrap;
-	text-align: center;
-	justify-content: center;
-	padding: 23px 60px;
+#terminalReslutsCont {
+    width: 100%;
+    height: 400px;
+    padding: 12px;
+    overflow-y: auto;
+    resize: none;
+    border: none;
+    font-size: 14px;
+    line-height: 28px;
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-@media (max-width: 991px) {
-	.play_button {
-		font-size: 40px;
-		white-space: initial;
-		padding: 0 20px;
-	}
+
+#terminalReslutsCont a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
 }
 
-.settings_button {
-	font-family: Cascadia Code, sans-serif;
-	font-size: 80px;
-	color: #fff;
-	backdrop-filter: blur(5px);
-	border-color: rgba(238, 238, 238, 1);
-	border-style: solid;
-	border-width: 4px;
-	background-color: rgba(17, 17, 17, 0.6);
-	margin-top: 36px;
-	width: 714px;
-	max-width: 100%;
-	align-items: center;
-	white-space: nowrap;
-	text-align: center;
-	justify-content: center;
-	padding: 22px 60px;
+#terminalReslutsCont a:hover {
+    text-decoration: underline;
 }
 
-@media (max-width: 991px) {
-	.settings_button {
-		font-size: 40px;
-		white-space: initial;
-		padding: 0 20px;
-	}
+#terminalTextInput {
+    background: black;
+    display: block;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+    color: white;
+    padding: 18px;
+    font-size: 14px;
+    outline: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+@-webkit-keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slideDownAnimation {
+    0% {
+        margin-top: -20px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@-moz-keyframes slideDownAnimation {
+    0% {
+        margin-top: -20px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@-o-keyframes slideDownAnimation {
+    0% {
+        margin-top: -20px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes slideDownAnimation {
+    0% {
+        margin-top: -20px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes textflicker {
+    from {
+        text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+    }
+
+    to {
+        text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .mainCont {
+        width: 100%;
+        padding: 0 0;
+    }
+
+    .mainCont h2 {
+        font-size: 32px;
+        margin: 40px 0 0 0;
+    }
+
+    .mainCont h3 {
+        font-size: 16px;
+        margin: 0 0 40px 0;
+    }
+
+    #terminalReslutsCont {
+        height: 100px;
+    }
+
 }

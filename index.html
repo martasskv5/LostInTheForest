@@ -1,39 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--<meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' http://localhost:3001 ws://127.0.0.1:443/; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; object-src 'none';">-->
   <title>Lost in the Forest</title>
 </head>
 
 <body>
-  <div class="div">
-    <div class="div-2">
-      <div class="div-3">
-        <div class="div-4">Lost in the Forest</div>
-        <button class="play_button">PLAY</button>
-        <button class="settings_button">SETTINGS</button>
-      </div>
-    </div>
+  <!--<script>
+    window.onload = function () {
+      document.getElementById('audio1').volume = 0.1; // Set volume to 10%
+    };
+  </script>-->
+  <div id="app"></div>
+  <!--<script type="module" src="/main.js"></script>-->
+  <div class="mainCont">
+    <h2>Lost in the Forest</h2>
+    <h3>(NOT) AI generated story game</h3>
   </div>
+  <div class="terminalCont">
+    <div id="terminalReslutsCont"></div>
+    <form>
+      <input id="terminalTextInput" type="text" placeholder="You control whole game using this bar." autocomplete="off">
+    </form>
+  </div>
+  </div>
+  <script type="module" src="./lost_in_forest.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const playButton = document.querySelector('.play_button');
-      const settingsButton = document.querySelector('.settings_button');
+  <!--<audio id="audio1" loop autoplay>
+    <source src="./game/soundtracks/03.Race 1 Going Off the Rails_lower_volume.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audio2" muted loop controls>
+          <source src="sound2.mp3" type="audio/mpeg">
+      </audio> -->
 
-      playButton.addEventListener('click', function () {
-        window.location.href = './src/play.html';
-      });
-
-      settingsButton.addEventListener('click', function () {
-        window.location.href = 'settings.html';
-      });
-    });
-  </script>
 </body>
-
 </html>

@@ -7,6 +7,7 @@ const groq = new Groq({
     dangerouslyAllowBrowser: true
 });
 
+//run on game startup
 async function gameIntro() {
     const introMessage = "You are going to play a game with user, where user is lost in forest and you controll enviroment, like weather, tempeture, time, animals. User control what he will do, that mean that you gave him options and conditions, and user must do a choise. To what ever that is off topic, you will respond: 'You can not do this. You are in forest!'. The main objective of game is to get out of the forest, but you can also add some small achievements through game.";  // Replace this with your actual instruction
     const introCompletion = await getGroqChatCompletion(introMessage, "system");

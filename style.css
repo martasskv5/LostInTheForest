@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     background: #111;
-    background-image: url("./background.jpeg");
+    background-image: url("./src/background.jpeg");
     background-size: cover;
     padding: 1em;
     font-family: Noto Sans Display;
@@ -70,7 +70,7 @@ p {
     background: black;
     width: 100%;
     border-radius: 4px;
-    padding: 120px 0 0 0;
+    padding: 12px 12px 12px 12px;
     margin-top: -20px;
     font-family: 'Roboto Mono', monospace;
     opacity: 0.6;

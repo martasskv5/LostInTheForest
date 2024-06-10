@@ -1,12 +1,8 @@
 import { Groq } from "groq-sdk";
 
-"use strict";
-console.log(import.meta.env.VITE_GROQ_API_KEY);
-const groq = new Groq({
-    apiKey: import.meta.env.VITE_GROQ_API_KEY,
-    dangerouslyAllowBrowser: true
-});
+const groq = null;
 
+"use strict";
 //run on game startup
 async function gameIntro() {
     const introMessage = "You are going to play a game with user, where user is lost in forest and you controll enviroment, like weather, tempeture, time, animals. User control what he will do, that mean that you gave him options and conditions, and user must do a choise. To what ever that is off topic, you will respond: 'You can not do this. You are in forest!'. The main objective of game is to get out of the forest, but you can also add some small achievements through game.";  // Replace this with your actual instruction
@@ -57,11 +53,26 @@ window.onload = function () {
     h2.textContent = 'Lost in the Forest';
     //h3.textContent = '(NOT) AI generated story';
     h3.textContent = "";
-    gameIntro();
+
+    addTextToResults("Enter your Groq key(you can get it on https://console.groq.com/keys):")
+    document.getElementById(`form`)[0].onsubmit = function (evt) {
+        evt.preventDefault(); // Preventing the form from submitting
+        const key = document.getElementById('terminalTextInput').value.trim();
+        groq = new Groq({
+            apiKey: key,
+            dangerouslyAllowBrowser: true
+        });
+
+        gameIntro();
+    }
 }
 
 document.getElementsByTagName('form')[0].onsubmit = function (evt) {
     evt.preventDefault(); // Preventing the form from submitting
-    main();
+    if (!groq) {
+        addTextToResults("Groq is not initialized. Please enter your Groq key.")
+        return;
+    }
+    else main();
     window.scrollTo(0, 150);
 }

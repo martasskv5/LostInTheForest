@@ -2,7 +2,7 @@
   "name": "getting-started-activity",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://martasskv5.github.io/{repo-name}/",
+  "homepage": "https://martasskv5.github.io/LostInTheForest/",
   "type": "module",
   "scripts": {
     "dev": "vite",
